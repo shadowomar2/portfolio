@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  cursor:  url(./cursor.png), auto; 
 }
 
 .App-logo {
@@ -16,7 +17,7 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
+  
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -34,5 +35,63 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+/* App.css */
+.slideshow-container {
+  position: relative;
+  width: 600px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden; 
+  top: 100px;
+  justify-content: center;
+
+}
+.slideshow {
+  
+  justify-content: center; /* Center horizontally */
+  align-items: center;  
+}
+
+.slide {
+  width: 600px;
+  height: 500px;
+  display: none;
+  animation: fade 1s ease-in-out;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  z-index: 1000;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+}
+
+.prev {
+  position: absolute;
+  left: 20px;
+  top: 40%;
+}
+
+.next {
+  position: absolute;
+  right: 20px;
+  top: 40%;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
